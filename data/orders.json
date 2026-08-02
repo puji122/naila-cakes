@@ -1,0 +1,82 @@
+[
+  {
+    "id": "NC-MSBCT5WQZLDW",
+    "createdAt": "2026-08-02T05:22:39.530Z",
+    "nama": "Naila",
+    "email": "fujisulaiman12@gmail.com",
+    "hp": "6281383847521",
+    "alamat": "Jl. Rasamala VII No.41 RT 10/13\nMenteng Dalam Tebet",
+    "tanggal": "2026-12-12",
+    "metode": "Transfer Bank (BCA)",
+    "catatan": "",
+    "items": [
+      {
+        "nama": "Black Forest",
+        "harga": 265000,
+        "qty": 1
+      },
+      {
+        "nama": "Triple Decker Cokelat",
+        "harga": 285000,
+        "qty": 1
+      },
+      {
+        "nama": "Red Velvet",
+        "harga": 295000,
+        "qty": 1
+      },
+      {
+        "nama": "Cheese Cake Naila",
+        "harga": 275000,
+        "qty": 1
+      }
+    ],
+    "total": 1120000,
+    "status": "diterima"
+  },
+  {
+    "id": "NC-MSBCMG262YZ8",
+    "createdAt": "2026-08-02T05:17:26.094Z",
+    "nama": "Puji Nurhidayat",
+    "email": "fujisulaiman12@gmail.com",
+    "hp": "081383847521",
+    "alamat": "Jl. Rasamala VII No.41 RT 10/13\nMenteng Dalam Tebet",
+    "tanggal": "2026-08-12",
+    "metode": "Transfer Bank (BCA)",
+    "catatan": "",
+    "items": [
+      {
+        "nama": "Praline Gift Kotak Emas",
+        "harga": 245000,
+        "qty": 1
+      },
+      {
+        "nama": "Truffle Cokelat Belgia",
+        "harga": 195000,
+        "qty": 1
+      }
+    ],
+    "total": 440000,
+    "status": "diterima"
+  },
+  {
+    "id": "NC-MSBC6Z6L4FQA",
+    "createdAt": "2026-08-02T05:05:24.381Z",
+    "nama": "asd",
+    "email": "fujisulaiman12@gmail.com",
+    "hp": "sadasdasdw",
+    "alamat": "asd",
+    "tanggal": "1212-12-12",
+    "metode": "Transfer Bank (BCA)",
+    "catatan": "ssd",
+    "items": [
+      {
+        "nama": "Triple Decker Cokelat",
+        "harga": 285000,
+        "qty": 2
+      }
+    ],
+    "total": 570000,
+    "status": "diterima"
+  }
+]

@@ -1,0 +1,146 @@
+[
+  {
+    "id": "P001",
+    "nama": "Triple Decker Cokelat",
+    "kategori": "kue",
+    "deskripsi": "Tiga lapis kue cokelat lembut dengan krim dan taburan cokelat premium.",
+    "harga": 285000,
+    "gambar": "assets/images/kue-regular.jpg",
+    "aktif": true
+  },
+  {
+    "id": "P002",
+    "nama": "Black Forest",
+    "kategori": "kue",
+    "deskripsi": "Kue cokelat klasik dengan ceri manis dan krim lembut yang menggoda.",
+    "harga": 265000,
+    "gambar": "assets/images/kue-regular.jpg",
+    "aktif": true
+  },
+  {
+    "id": "P003",
+    "nama": "Red Velvet",
+    "kategori": "kue",
+    "deskripsi": "Kue merah beludru dengan cream cheese yang lembut dan manis pas.",
+    "harga": 295000,
+    "gambar": "assets/images/kue-regular.jpg",
+    "aktif": true
+  },
+  {
+    "id": "P004",
+    "nama": "Cheese Cake Naila",
+    "kategori": "kue",
+    "deskripsi": "Cheese cake panggang yang creamy dengan aroma keju yang kuat.",
+    "harga": 275000,
+    "gambar": "assets/images/kue-regular.jpg",
+    "aktif": true
+  },
+  {
+    "id": "P005",
+    "nama": "Brownies Cokelat Premium",
+    "kategori": "kue",
+    "deskripsi": "Brownies fudgy dengan cokelat Belgia, padat dan lumer di mulut.",
+    "harga": 225000,
+    "gambar": "assets/images/kue-regular.jpg",
+    "aktif": true
+  },
+  {
+    "id": "P006",
+    "nama": "Praline Box 12",
+    "kategori": "praline",
+    "deskripsi": "Dua belas praline isi variatif dalam kotak elegan, sempurna untuk hadiah.",
+    "harga": 165000,
+    "gambar": "assets/images/birthday.jpg",
+    "aktif": true
+  },
+  {
+    "id": "P007",
+    "nama": "Praline Gift Kotak Emas",
+    "kategori": "praline",
+    "deskripsi": "Praline pilihan dalam kemasan premium dengan sentuhan warna emas.",
+    "harga": 245000,
+    "gambar": "assets/images/birthday.jpg",
+    "aktif": true
+  },
+  {
+    "id": "P008",
+    "nama": "Truffle Cokelat Belgia",
+    "kategori": "praline",
+    "deskripsi": "Truffle lembut dengan taburan kakao, meleleh sempurna di lidah.",
+    "harga": 195000,
+    "gambar": "assets/images/birthday.jpg",
+    "aktif": true
+  },
+  {
+    "id": "P009",
+    "nama": "Choco Stick",
+    "kategori": "snacks",
+    "deskripsi": "Stik renyah dilapisi cokelat premium, camilan favorit sepanjang waktu.",
+    "harga": 45000,
+    "gambar": "assets/images/snacks1.jpg",
+    "aktif": true
+  },
+  {
+    "id": "P010",
+    "nama": "Choco Banana",
+    "kategori": "snacks",
+    "deskripsi": "Pisang goreng renyah berbalut cokelat manis yang lezat.",
+    "harga": 55000,
+    "gambar": "assets/images/snacks1.jpg",
+    "aktif": true
+  },
+  {
+    "id": "P011",
+    "nama": "Cokelat Batang Naila",
+    "kategori": "snacks",
+    "deskripsi": "Batang cokelat premium dengan aneka topping pilihan Anda.",
+    "harga": 65000,
+    "gambar": "assets/images/snacks1.jpg",
+    "aktif": true
+  },
+  {
+    "id": "P012",
+    "nama": "Hampers Reguler",
+    "kategori": "hampers",
+    "deskripsi": "Paket hampers berisi aneka kue dan cokelat favorit dalam kotak cantik.",
+    "harga": 385000,
+    "gambar": "assets/images/choco.jpg",
+    "aktif": true
+  },
+  {
+    "id": "P013",
+    "nama": "Hampers Premium",
+    "kategori": "hampers",
+    "deskripsi": "Hampers eksklusif dengan pilihan praline, cookies, dan cokelat spesial.",
+    "harga": 585000,
+    "gambar": "assets/images/choco.jpg",
+    "aktif": true
+  },
+  {
+    "id": "P014",
+    "nama": "Hampers Anak",
+    "kategori": "hampers",
+    "deskripsi": "Hampers lucu penuh camilan cokelat yang disukai si kecil.",
+    "harga": 295000,
+    "gambar": "assets/images/choco.jpg",
+    "aktif": true
+  },
+  {
+    "id": "P015",
+    "nama": "Cookies Topping Cokelat",
+    "kategori": "cookies",
+    "deskripsi": "Cookies renyah dengan topping cokelat leleh yang digemari semua.",
+    "harga": 85000,
+    "gambar": "assets/images/cookies1.jpg",
+    "aktif": true
+  },
+  {
+    "id": "P016",
+    "nama": "Cookies Kaleng Naila",
+    "kategori": "cookies",
+    "deskripsi": "Koleksi cookies pilihan dalam kaleng cantik untuk dibagikan.",
+    "harga": 175000,
+    "gambar": "assets/images/cookies1.jpg",
+    "aktif": true
+  }
+]

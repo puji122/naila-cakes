@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Pesanan | Naila's Cake</title>
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container">
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">&#9776;</button>
+      <ul class="nav-list" id="navList">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="produk.html">Produk</a></li>
+        <li><a href="pesanan.html">Lacak Pesanan</a></li>
+        <li><a href="admin.html" class="aktif">Admin</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Kelola Status Pesanan</h2>
+        <div class="divider"></div>
+        <p class="section-sub">Perbarui status pesanan pelanggan: Menunggu Pembayaran &rarr; Konfirmasi Pembayaran &rarr; Dikemas &rarr; Dikirim &rarr; Diterima.</p>
+
+        <div class="form-pesan tampil" id="info" style="max-width:860px;margin:0 auto 22px"></div>
+
+        <div style="max-width:860px;margin:0 auto;overflow-x:auto">
+          <table class="tabel-pesanan">
+            <thead>
+              <tr>
+                <th>No. Pesanan</th>
+                <th>Pelanggan</th>
+                <th>Total</th>
+                <th>Status</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody id="tabelBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal-overlay" id="modalKonfirmasi" style="display:none">
+    <div class="modal-kotak">
+      <h3>Konfirmasi Perubahan Status</h3>
+      <p>Ubah status pesanan <strong id="modalId"></strong> menjadi <strong id="modalStatus"></strong>?</p>
+      <div class="modal-aksi">
+        <button class="btn btn-outline" type="button" id="modalBatal">Batal</button>
+        <button class="btn btn-emas" type="button" id="modalYa">Ya, Simpan</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        Copyright &copy; <span class="tahun"></span> Naila's Cake. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/admin-pesanan.js"></script>
+</body>
+</html>

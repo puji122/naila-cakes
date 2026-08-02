@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin | Naila's Cake</title>
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="admin-header">
+    <div class="container">
+      <div class="admin-brand">
+        <img src="assets/logo.svg" alt="Naila's Cake">
+        <div>
+          <strong>Naila's Cake</strong>
+          <span>Panel Admin</span>
+        </div>
+      </div>
+      <div class="admin-tautan">
+        <a href="index.html" target="_blank" rel="noopener">Lihat Situs</a>
+        <a href="produk.html" target="_blank" rel="noopener">Toko</a>
+        <a href="#" id="adminLogout" style="border-color:#e6b8b8;color:#e6a8a8">Logout</a>
+      </div>
+    </div>
+  </header>
+
+  <nav class="admin-tabs">
+    <div class="container">
+      <button class="tab-btn aktif" data-tab="ringkasan" type="button">Ringkasan</button>
+      <button class="tab-btn" data-tab="pesanan" type="button">Pesanan</button>
+      <button class="tab-btn" data-tab="produk" type="button">Produk</button>
+    </div>
+  </nav>
+
+  <main class="admin-main">
+    <div class="container">
+
+      <div class="form-pesan tampil" id="info" style="display:none;max-width:860px;margin:0 auto 22px"></div>
+
+      <!-- ===== Ringkasan ===== -->
+      <section class="tab-panel" id="tab-ringkasan">
+        <h2 class="section-title">Ringkasan</h2>
+        <div class="divider"></div>
+        <div class="stat-grid" id="statGrid"></div>
+
+        <h3 class="admin-subtitle">Pesanan Terbaru</h3>
+        <div style="overflow-x:auto">
+          <table class="tabel-pesanan">
+            <thead>
+              <tr>
+                <th>No. Pesanan</th>
+                <th>Pelanggan</th>
+                <th>Tanggal</th>
+                <th>Total</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="ringkasBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ===== Pesanan ===== -->
+      <section class="tab-panel" id="tab-pesanan" style="display:none">
+        <h2 class="section-title">Kelola Pesanan</h2>
+        <div class="divider"></div>
+        <p class="section-sub">Perbarui status pesanan pelanggan: Menunggu Pembayaran &rarr; Konfirmasi Pembayaran &rarr; Dikemas &rarr; Dikirim &rarr; Diterima.</p>
+
+        <div class="admin-toolbar">
+          <div class="admin-cari">
+            <input type="text" id="cariPesanan" placeholder="Cari No. pesanan atau nama pelanggan...">
+          </div>
+          <select id="filterStatus">
+            <option value="semua">Semua Status</option>
+            <option value="menunggu">Menunggu Pembayaran</option>
+            <option value="konfirmasi">Konfirmasi Pembayaran</option>
+            <option value="dikemas">Dikemas</option>
+            <option value="dikirim">Dikirim</option>
+            <option value="diterima">Diterima</option>
+          </select>
+        </div>
+
+        <div style="overflow-x:auto">
+          <table class="tabel-pesanan">
+            <thead>
+              <tr>
+                <th>No. Pesanan</th>
+                <th>Pelanggan</th>
+                <th>Tanggal</th>
+                <th>Total</th>
+                <th>Status</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody id="tabelBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ===== Produk ===== -->
+      <section class="tab-panel" id="tab-produk" style="display:none">
+        <h2 class="section-title">Kelola Produk</h2>
+        <div class="divider"></div>
+        <div class="admin-toolbar">
+          <div class="admin-cari">
+            <input type="text" id="cariProduk" placeholder="Cari produk...">
+          </div>
+          <button class="btn btn-emas" type="button" id="tambahProdukBtn">+ Tambah Produk</button>
+        </div>
+
+        <div style="overflow-x:auto">
+          <table class="tabel-pesanan">
+            <thead>
+              <tr>
+                <th>Gambar</th>
+                <th>Nama</th>
+                <th>Kategori</th>
+                <th>Harga</th>
+                <th>Status</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody id="produkBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ===== Modal Detail Pesanan ===== -->
+  <div class="modal-overlay" id="modalDetail" style="display:none">
+    <div class="modal-kotak modal-lebar">
+      <h3>Detail Pesanan <span id="detailId"></span></h3>
+      <div class="detail-grid" id="detailGrid"></div>
+      <div class="modal-aksi">
+        <button class="btn btn-outline" type="button" id="detailTutup">Tutup</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Modal Form Produk ===== -->
+  <div class="modal-overlay" id="modalProduk" style="display:none">
+    <div class="modal-kotak modal-lebar">
+      <h3 id="produkFormJudul">Tambah Produk</h3>
+      <form id="formProduk" class="form-kontak" style="box-shadow:none;border:none;padding:0;text-align:left">
+        <input type="hidden" id="pId">
+        <div class="form-group">
+          <label for="pNama">Nama Produk *</label>
+          <input type="text" id="pNama" required>
+        </div>
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label for="pKategori">Kategori</label>
+            <select id="pKategori">
+              <option value="kue">Kue Reguler</option>
+              <option value="praline">Praline</option>
+              <option value="snacks">Snacks</option>
+              <option value="hampers">Hampers</option>
+              <option value="cookies">Cookies</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="pHarga">Harga (Rp) *</label>
+            <input type="number" id="pHarga" min="0" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="pDeskripsi">Deskripsi</label>
+          <textarea id="pDeskripsi" style="min-height:90px"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="pGambar">Gambar (URL file)</label>
+          <input type="text" id="pGambar" list="daftarGambar" placeholder="assets/images/kue-regular.jpg">
+          <datalist id="daftarGambar">
+            <option value="assets/images/kue-regular.jpg">
+            <option value="assets/images/birthday.jpg">
+            <option value="assets/images/snacks1.jpg">
+            <option value="assets/images/choco.jpg">
+            <option value="assets/images/cookies1.jpg">
+          </datalist>
+        </div>
+        <div class="form-group">
+          <label class="checkbox-label"><input type="checkbox" id="pAktif" checked> Tampilkan di toko</label>
+        </div>
+        <div class="modal-aksi">
+          <button class="btn btn-outline" type="button" id="produkBatal">Batal</button>
+          <button class="btn btn-emas" type="submit">Simpan Produk</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ===== Modal Invoice ===== -->
+  <div class="modal-overlay" id="modalInvoice" style="display:none">
+    <div class="modal-kotak modal-lebar" style="max-width:720px">
+      <div class="invoice-aksi">
+        <button class="btn btn-emas" type="button" id="invoiceEmail">Kirim via Email</button>
+        <button class="btn btn-wa" type="button" id="invoiceWa">Kirim via WhatsApp</button>
+        <button class="btn btn-coklat" type="button" id="invoicePdf">Download PDF</button>
+        <button class="btn btn-hapus" type="button" id="invoiceTutup">Tutup</button>
+      </div>
+      <div class="invoice-sheet" id="invoiceContent"></div>
+    </div>
+  </div>
+
+  <!-- ===== Modal Konfirmasi Umum ===== -->
+  <div class="modal-overlay" id="modalKonfirmasi" style="display:none">
+    <div class="modal-kotak">
+      <h3 id="konfJudul">Konfirmasi</h3>
+      <p id="konfTeks"></p>
+      <div class="modal-aksi">
+        <button class="btn btn-outline" type="button" id="konfBatal">Batal</button>
+        <button class="btn btn-emas" type="button" id="konfYa">Ya, Lanjutkan</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>
